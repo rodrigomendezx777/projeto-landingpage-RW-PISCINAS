@@ -1,0 +1,476 @@
+*{
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0;
+
+  font-family:'Roboto', sans-serif;
+}
+:root {
+  --primary: #00baf2;
+  --secondary: #95989a;
+  --text-color: #fff;
+  --text-secondary: #000;
+  --text-tertiary: #5d5d5d;
+}
+body{
+  box-sizing: border-box;
+  margin: 10px;
+  background-image: url(img/bkgpiscina.jpg);
+}
+
+.navigation{
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 5px 60px;
+  background-color:transparent;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur( 5px);
+  border-radius: 30px;
+  transition: 2.5s;
+  z-index: 2;
+
+}
+.navigation img{
+  width: 100px;
+  height: auto;
+}
+
+.menulist ul li {
+  list-style: none;
+  display: inline;
+  margin: 0 20px;
+
+}
+
+.menulist ul li a{
+  text-decoration: none;
+  color: #000000;
+  font-size: 20px;
+}
+
+.menulist ul li a:hover{
+  padding: 5px;
+  background-color: #00baf2;
+  color: #000000;
+  border-radius: 30px;
+  transition: 1s;
+}
+
+.bnt-contato-nav button{
+  font-size: 20px;
+  width: 100px;
+  height: 40px;
+  border: 0;
+  background-color: #00baf2;
+  border-radius: 30px;
+}
+
+.bnt-contato-nav button:hover{
+  background-color:rgb(201, 124, 8);
+  transition: 0.5s;
+}
+
+/*efeito com js*/
+
+.navigation.rolagem{
+  position: fixed;
+  padding: 0px 80px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: #fff;
+  transition: 2.5s;
+  z-index: 2;
+
+}
+.navigation.rolagem img{
+  width: 50px;
+  height: auto;
+}
+
+
+/*background-color: #ffffffec;*/
+.hero{
+  margin-top: 40px;
+  padding:40px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #ffffffec;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+  align-items: center;
+  height: 100vh;
+}
+
+.hero-text h1{
+  font-weight: 900;
+  font-family: "Roboto";
+  line-height: 60px;
+  text-transform: uppercase;
+  background-image: url(img/bkgpiscina.jpg);
+  font-size: 70px;
+  max-width: 800px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text p{
+  color: #000000;
+  font-size: 20px;
+}
+
+
+/*botao de açao formulario hero*/
+
+.btn-formulario {
+  background-color: var(--primary);
+  color: var(--text-color);
+  text-transform: uppercase;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.btn-formulario:hover {
+  opacity: 1;
+}
+
+
+/* formulario container estilo */
+
+#subscription-form {
+  backdrop-filter: blur( 5px);
+  border: 2px solid var(--text-color);
+  border-radius: 30px;
+  background-color: transparent;
+  padding: 2em;
+}
+
+#subscription-form p {
+  font-size: 1.5em;
+  color: var(--text-secondary);
+  margin-bottom: 1em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.8em;
+}
+
+.form-group label {
+  color: var(--text-tertiary);
+  margin-bottom: 0.3em;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  padding: 6px 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+
+
+ /*Benefits section*/
+
+#key-benefits {
+  margin-top: 10px;
+  background-image: url(img/imgheropiscina.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 20px;
+  border-radius: 30px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+
+}
+
+/*cards*/
+
+.card {
+  width: 350px;
+  height: 500px;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+
+}
+/*estrutura visual*/
+
+.card-inner {
+  padding: 10px;
+  width: inherit;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255,255,255,.05);
+  box-shadow: 0 0 50px rgba(0,0,0,0.65);
+  backdrop-filter: blur(30px);
+  border-radius: 8px;
+  border: 2px solid #00baf2;
+}
+
+.card:hover {
+  transform: scale(1.04) rotate(1deg);
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient( #00baf2, #ffffff96);
+  border-radius: 50%;
+  position: absolute;
+  animation: move-up6 1s ease-in infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+  top: -25px;
+  left: -25px;
+}
+
+.circle:nth-child(2) {
+  bottom: -25px;
+  right: -25px;
+  animation-name: move-down1;
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(20px);
+  }
+}
+
+.benefit-img{
+  border-radius: 50%;
+  background-color: #000;
+  width: 250px;
+  height: 250px;
+}
+
+.benefit-img img{
+  width: 250px;
+  height: 250px;
+  border: 2px solid #00baf2;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1em;
+  z-index: 1;
+}
+
+.card-inner h1{
+  color: #00baf2;
+  font-size: 1.5em;
+
+
+}
+.card-inner p{
+  color: #000000;
+  font-size: 0.80rem;
+}
+
+
+
+/*
+
+#key-benefits .titulobeneficios{
+  background-color:#5d5d5d;
+  font-family:Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 30px;
+  color:#00baf2;
+  font-size: 50px;
+  font-weight: 700;
+
+}
+
+.benefits {
+  height: 94vh;
+  background-color: transparent;
+  align-items: center;
+  backdrop-filter: blur( 4px);
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  width: 100%;
+  border-radius: 30px;
+  border: 2px solid var(--text-color);
+}
+
+.benefit {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 500px;
+  border-radius: 30px;
+  color: var(--text-tertiary);
+  border: 2px solid var(--text-color);
+}
+
+.benefit-img {
+  border: 2px solid var(--text-color);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1em;
+}
+
+.benefit h1{
+  font-size: 2em;
+}
+*/
+
+
+
+/*sobre nós*/
+.sobrenos{
+  margin-top: 10px;
+  padding:40px;
+  background-color: #ffffffec;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+  align-items: center;
+  height: 100vh;
+}
+
+.sobrenos .facebook iframe{
+  width: 500px;
+  height: 550px;
+}
+
+.sobrenos .instagram .instagram-media{
+  width: 400px;
+  height: 500px;
+}
+
+
+
+
+@media screen and (max-width: 1062px) {
+
+  /*nav baar*/
+
+  .menulist, .bnt-contato-nav{
+    display: none;
+  }
+
+  .hero{
+    flex-direction: column;
+    height: auto;
+    gap: 50px;
+  }
+
+  .hero .hero-text h1{
+    margin-top: 50px;
+    font-size: 50px;   
+    text-align: center; 
+  }
+  .hero .hero-text p{
+    padding-top: 30px;
+    text-align: center;
+  }
+
+
+ /* .benefits{
+    height:auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+  }
+  */
+
+  #key-benefits {
+    flex-direction: column;
+    gap: 50px;
+    height: auto;
+    align-items: center;
+  
+  }
+
+  .card {
+    width: 300px;
+    height: 500px;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .card-inner {
+    padding-top: 20px;
+  }
+
+  .benefit-img{
+    border-radius: 50%;
+    background-color: #fffb16;
+    width: 250px;
+    height: 250px;
+  }
+
+  .benefit-img img{
+    box-shadow: 0 0 50px rgba(0,0,0,0.65);
+    width: 250px;
+    height: 250px;
+    border: 2px solid #00baf2;
+    border-radius: 50%;
+  }
+
+.card-inner p {
+    font-size: auto;
+}
+
+
+
+/*sobrenos*/
+
+.sobrenos{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  height: auto;
+}
+
+.sobrenos .facebook iframe{
+  width: 350px;
+  height: 550px;
+}
+
+.sobrenos .instagram .instagram-media{
+  align-items: center;
+  width: 400px;
+  height: 650px;
+}
+
+
+}
